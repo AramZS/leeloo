@@ -22,7 +22,7 @@
 	},
 	"name": "leeloo",
 	"version": "0.0.1",
-	"description": "A text editor to work with a multipass publishing system. ",
+	"description": "An abstract text editor to work with a multipass publishing system. ",
 	"main": "src/index.js",
 	"author": "Aram Zucker-Scharff <aramzs@hacktext.com>",
 	"license": "MIT"
