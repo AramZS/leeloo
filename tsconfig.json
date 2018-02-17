@@ -1,0 +1,26 @@
+{
+	"compilerOptions": {
+		"outDir": "./build/",
+		"noImplicitAny": true,
+		"sourceMap": true,
+		"moduleResolution": "node",
+		"lib": [
+			"es2016",
+			"dom"
+		],
+		"module": "commonjs",
+		"target": "es5",
+		"allowJs": true,
+		"baseUrl": ".",
+		"jsx": "react",
+		"paths": {
+			"*": [
+				"node_modules/*",
+				"src/types/*"
+			]
+		},
+		"include": [
+			"./src/**/*"
+		]
+	}
+}
