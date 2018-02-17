@@ -3,24 +3,30 @@ const path = require('path');
 var nodeExternals = require('webpack-node-externals');
 
 module.exports = {
-	devtool: 'inline-source-map',
-	entry: ['./src/server.ts', './src/index.ts'],
-	externals: [nodeExternals()],
+	devtool: 'source-map',
+	entry: ['./src/index.tsx'],
+	externals: {
+		"react": "React",
+		"react-dom": "ReactDOM"
+	},
 	module: {
-		rules: [
-			{
+		rules: [{
 				exclude: /node_modules/,
 				test: /\.tsx?$/,
-				use: 'ts-loader'
+				use: 'awesome-typescript-loader'
+			},
+			{
+				enforce: "pre",
+				test: /\.js$/,
+				loader: "source-map-loader"
 			}
 		]
 	},
 	output: {
-		filename: 'server.js',
-		path: path.resolve(__dirname, 'build')
+		filename: 'leeloo.js',
+		path: path.resolve(__dirname, 'dist')
 	},
 	resolve: {
 		extensions: ['.tsx', '.ts', '.js']
-	},
-	target: 'node'
+	}
 };

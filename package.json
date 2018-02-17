@@ -1,5 +1,6 @@
 {
 	"dependencies": {
+		"@types/draft-js": "^0.10.20",
 		"@types/react": "^16.0.38",
 		"@types/react-dom": "^16.0.4",
 		"async": "^2.6.0",
